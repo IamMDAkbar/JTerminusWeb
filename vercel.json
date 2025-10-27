@@ -6,8 +6,8 @@
             "maxDuration": 10
         }
     },
-    "buildCommand": null,
     "outputDirectory": "public",
+    "buildCommand": null,
 
     "routes": [
         {

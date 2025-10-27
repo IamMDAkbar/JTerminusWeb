@@ -8,10 +8,25 @@ const app = express();
 const port = process.env.PORT || 3000;
 const DATABASE_URL = process.env.MONGODB_URI || process.env.DATABASE_URL;
 
-// Basic error handling middleware
+// Enhanced error handling middleware
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
+    console.error('Error:', {
+        message: err.message,
+        stack: err.stack,
+        path: req.path,
+        method: req.method
+    });
+    
+    // Don't expose error details in production
+    const message = process.env.NODE_ENV === 'production' 
+        ? 'Internal Server Error' 
+        : err.message;
+        
+    res.status(500).json({ 
+        error: message,
+        path: req.path,
+        success: false 
+    });
 });
 
 // Middleware
@@ -19,11 +34,10 @@ app.use(cors());
 app.use(express.json());
 
 // Set up static file serving
-app.use('/', express.static(__dirname));
+app.use(express.static(path.join(__dirname)));
 
 // Default route - serve the HTML file
 app.get('/', function(req, res) {
-    console.log('Serving HTML file from:', path.join(__dirname, 'index.html'));
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -42,14 +56,17 @@ app.get('/api/test', async (req, res) => {
 const uri = DATABASE_URL;
 if (!uri) {
     console.error('DATABASE_URL or MONGODB_URI is not set in environment variables');
-    process.exit(1);
+    // Don't exit in production, just log the error
+    if (process.env.NODE_ENV !== 'production') {
+        process.exit(1);
+    }
 }
 
 console.log('Attempting to connect to MongoDB...');
 const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    maxPoolSize: 10
+    maxPoolSize: 10,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000
 });
 
 // Database and collection names

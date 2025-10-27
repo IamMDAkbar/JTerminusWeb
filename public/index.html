@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTerminus - Lightweight Linux Terminal Emulator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="top-actions">
+                <button id="download-btn" class="download-small">Download Now <i class="fas fa-arrow-down"></i></button>
+            </div>
+            <div class="header-content">
+                <div class="logo"><i class="fas fa-terminal"></i> JTerminus</div>
+                <div class="tagline">A lightweight Linux terminal emulator built in Java</div>
+                <div class="header-scroll-indicator">
+                    <div class="mouse-icon"></div>
+                    <span>Scroll to explore</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number"><i class="fas fa-code"></i> 100%</div>
+                    <div class="stat-label">Pure Java</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><i class="fas fa-feather-alt"></i> <5MB</div>
+                    <div class="stat-label">Lightweight</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><i class="fas fa-wifi-slash"></i> 0</div>
+                    <div class="stat-label">Internet Required</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><i class="fab fa-osi"></i> MIT</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="feature-title">Pure Java</div>
+                    <div class="feature-desc">Built entirely in Java using Swing and ProcessBuilder for reliable cross-platform compatibility.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="feature-title">Persistent Sessions</div>
+                    <div class="feature-desc">Maintains shell state across commands. Use cd, mkdir, and more with full context retention.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plane-slash"></i>
+                    </div>
+                    <div class="feature-title">Fully Offline</div>
+                    <div class="feature-desc">No internet required. Run your terminal anywhere, anytime without external dependencies.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="feature-title">Dynamic Prompts</div>
+                    <div class="feature-desc">Real-time directory updates in your prompt, just like a native Linux terminal.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="feature-title">Lightweight</div>
+                    <div class="feature-desc">Minimal footprint with maximum functionality. Fast startup and low resource usage.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-unlock"></i>
+                    </div>
+                    <div class="feature-title">Open Source</div>
+                    <div class="feature-desc">Free for everyone. MIT licensed for educational and commercial use.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About JTerminus</h2>
+            <div class="about-content">
+                <p>
+                    JTerminus is a <span class="highlight">cross-platform Linux terminal emulator</span> written entirely in Java, 
+                    designed to bridge the gap between system-level programming and practical application development.
+                </p>
+                <p>
+                    Unlike traditional terminal emulators, JTerminus provides a fully <span class="highlight">offline-capable</span> 
+                    command-line experience inside a clean, minimal Java Swing interface. It replicates real shell behavior including 
+                    directory navigation, file management, and persistent bash sessions.
+                </p>
+                <p>
+                    The project demonstrates the powerful integration of <span class="highlight">Java and Linux systems</span>, 
+                    showcasing how ProcessBuilder and proper state management can create a seamless terminal experience. Whether 
+                    you're a student learning system programming, a developer exploring Java capabilities, or an enthusiast who 
+                    appreciates elegant system integration, JTerminus offers both educational value and practical utility.
+                </p>
+                <p>
+                    Built with a focus on <span class="highlight">simplicity and efficiency</span>, JTerminus proves that powerful 
+                    tools don't need to be complex.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section id="download" class="download-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Experience the power of a lightweight, offline-capable terminal emulator</p>
+                <a href="https://github.com/akbarkun/JTerminus/releases/download/v1.0/JTerminus.exe" class="download-button-large">
+                    <i class="fab fa-windows"></i>
+                    Download for Windows
+                </a>
+                <div class="cta-note">
+                    <i class="fas fa-info-circle"></i>
+                    Free & Open Source • MIT Licensed • Less than 5MB
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="audience">
+        <div class="container">
+            <h2 class="section-title">Built For</h2>
+            <div class="audience-list">
+                <div class="audience-tag">
+                    <i class="fas fa-code"></i> Developers
+                </div>
+                <div class="audience-tag">
+                    <i class="fas fa-graduation-cap"></i> Students
+                </div>
+                <div class="audience-tag">
+                    <i class="fab fa-linux"></i> Linux Enthusiasts
+                </div>
+                <div class="audience-tag">
+                    <i class="fas fa-chalkboard-teacher"></i> Educators
+                </div>
+                <div class="audience-tag">
+                    <i class="fas fa-microchip"></i> System Programmers
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="social-links">
+                <a href="https://github.com/IamMDAkbar" class="social-link" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/jterminus" class="social-link" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/jterminus" class="social-link" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://discord.gg/jterminus" class="social-link" target="_blank" title="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="mailto:contact@example.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback">
+        <div class="feedback-content">
+            <div class="container">
+                <h2><i class="fas fa-comments"></i> We Value Your Feedback</h2>
+                <p>Help us improve JTerminus by sharing your experience, reporting bugs, or suggesting new features.</p>
+                <button class="feedback-button" id="openFeedback">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Feedback
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/akbarkun/JTerminus" target="_blank">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+                <a href="https://github.com/akbarkun/JTerminus/blob/main/LICENSE" target="_blank">
+                    <i class="fas fa-balance-scale"></i> MIT License
+                </a>
+                <a href="mailto:jterminus.support@gmail.com">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+            <div class="copyright">
+                © 2025 JTerminus. Open source and free forever.
+            </div>
+        </div>
+</footer>
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-comments"></i> Send Feedback</h2>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Feedback</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Feedback</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
